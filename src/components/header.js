@@ -180,7 +180,7 @@ class Header extends Component {
         return (
             <div>
                 <AppBar
-                    title={<span onClick={this.handleHome} style={{cursor: "pointer"}}>iStudy</span>}
+                    title={<span onClick={this.handleHome} style={{cursor: "pointer"}}>ePortal</span>}
                     titleStyle={{textAlign: "center"}}
                     onLeftIconButtonTouchTap={this.handleToggle}
                     iconElementRight={this.props.logged ? this.renderMore() : this.renderLogin()}

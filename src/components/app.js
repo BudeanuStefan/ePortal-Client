@@ -36,7 +36,7 @@ export default class App extends Component {
                     {/*<SearchCourse/>*/}
                     <br/>
                     <div>
-                        Welcome to iStudy application! You will find here all your courses, updates,
+                        Welcome to ePortal application! You will find here all your courses, updates,
                         news, comments related to your curricula. Please sign up or log in to continue.
                     </div>
                     <br/>

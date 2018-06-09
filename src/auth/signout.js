@@ -84,7 +84,7 @@ class Signout extends Component {
                             display: 'inline-block'
                         }}>
                             <br/>
-                            <p>Thank you for visiting iStudy!</p>
+                            <p>Thank you for visiting ePortal!</p>
                             <p>You've successfully logged out of your account.</p>
                             <br/>
                         </div>
