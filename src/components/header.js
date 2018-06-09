@@ -73,7 +73,7 @@ class Header extends Component {
         }
 
         return (
-            <div style={{overflow:'hidden', margin:0, padding:0}}>
+            <div className="profile" style={{overflow:'hidden', margin:0, padding:0}}>
                 <div style={{
                     margin:0,
                     padding:0,
@@ -85,11 +85,11 @@ class Header extends Component {
                     <div style={{overflow:'hidden', margin:0, paddingTop:20, paddingBottom:0, paddingLeft:20, paddingRight:20}}>
                         <img src={`${avatar_image}`} width="80px" height="80px" alt="" className="img-circle" style={{marginLeft:0,marginRight:0, verticalAlign:'middle'}}/>
                     </div>
-                    <div style={{margin:0, paddingLeft:26, paddingRight:26}}>
+                    <div className="student-info" style={{margin:0, paddingLeft:26, paddingRight:26}}>
                         <p className="text-white text-bold" style={{height:12}}>{name}</p>
                         <p className="text-white" style={{height:12}}>{registrationId}</p>
-                        <p className="text-white" style={{height:12}}>{level}, {year}</p>
                         <p className="text-white" style={{height:12}}>{specialization}</p>
+                        <p className="text-white" style={{height:12}}>{level}, {year}</p>
                     </div>
                 </div>
                 <div style={{height:10}}/>

@@ -97,3 +97,123 @@ input::placeholder {
     padding: 5px 10px;
     text-align: center;
 }
+
+.dropdown button {
+    background-color: transparent!important;
+    border: none;
+    border-radius: 0;
+    height: 3rem;
+    width: 100%;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #9e9e9e;
+    outline: none;
+    text-align: left;
+    text-transform: none;
+}
+
+.dropdown-toggle:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+button.dropdown-toggle {
+    border-bottom: 1px solid #9e9e9e;
+}
+
+.dropdown button:hover,
+.dropdown button:focus {
+    background-color: transparent!important;
+    box-shadow: none;
+    color: #9e9e9e;
+    outline: none!important;
+}
+
+.dropdown .dropdown-menu {
+    width: 100%;
+}
+
+button.dropdown-item {
+    padding-left: 10px;
+    height: 2rem;
+    margin: 0 0 10px 0;
+}
+
+.dropdown label {
+    font-size: 18px !important;
+}
+/*My Profile styles*/
+.profile .student-info{
+    text-transform: capitalize;
+}
+
+/*News*/
+.carousel {
+    height: 470px;
+}
+
+.carousel .carousel-inner {
+   height: 100%!important;
+}
+
+.carousel .carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel .carousel-item {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel .carousel-item img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.carousel-item:first-of-type {
+     position: relative;
+ }
+
+.carousel-inner .item {
+    backface-visibility: visible;
+}
+
+.news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news .media {
+    border-radius: 10px;
+    width: calc(1/2*100% - (1 - 1/2)*40px);
+    position: relative;
+    padding: 20px;
+}
