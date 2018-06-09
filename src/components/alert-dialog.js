@@ -9,7 +9,6 @@ export default class AlertDialog extends Component {
             open: false
         };
     }
-    //comment
 
     handleOpen = () => {
         this.setState({open: true});
@@ -18,6 +17,7 @@ export default class AlertDialog extends Component {
     handleClose = () => {
         this.setState({open: false});
     };
+    //comment
 
     render() {
         const actions = [
