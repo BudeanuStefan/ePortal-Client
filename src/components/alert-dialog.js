@@ -9,6 +9,7 @@ export default class AlertDialog extends Component {
             open: false
         };
     }
+    //comment
 
     handleOpen = () => {
         this.setState({open: true});
