@@ -196,8 +196,13 @@ class Curriculum extends Component {
                             <span>{body.time}</span>
                         </div>
                     </div>
+
                 </div>
-            )}
+
+            )},
+            <div className="row text-size-fifth">
+                <div className="col-sm-7 text-left"><span>{header.testLink}</span></div>
+            </div>
         );
     };
 
