@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Row, Col
-} from 'reactstrap';
+import Slider from "react-slick";
 import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {connect} from 'react-redux';
@@ -18,19 +11,23 @@ import Footer from './footer';
 
 const items = [
   {
+    id: 1,
     src: '../../images/feaa-b.png',
     altText: 'FEAA ',
     caption: 'Biblioteca organizeaza concurs destinat studentilor',
     captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
   },
   {
+    id: 2,
     src: '../../images/main1.png',
     caption: 'Bun venit la UAIC!',
     captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
   },
   {
+    id: 3,
     src: '../../images/slide0.png',
     altText: 'licitatie',
+    caption: 'Bun venit la UAIC!',
     captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
   }
 ];
@@ -124,32 +121,34 @@ class Welcome extends Component {
   render() {
     const {activeIndex} = this.state;
 
-    const slides = items.map((item) => {
-      return (
-          <CarouselItem
-              onExiting={this.onExiting}
-              onExited={this.onExited}
-              key={item.src}
-          >
-            <img src={item.src} alt={item.altText}/>
-            <CarouselCaption captionText={item.captionText} captionHeader={item.caption}/>
-          </CarouselItem>
-      );
-    });
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: false,
+      arrows: true,
+      autoplay: true,
+    };
 
     return (
         <div>
           <Header/>
-          <Carousel
-              activeIndex={activeIndex}
-              next={this.next}
-              previous={this.previous}
-          >
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex}/>
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous}/>
-            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next}/>
-          </Carousel>
+          <Slider {...settings}>
+            {
+              items.map(item => (
+                  <div className="slide" key={item.id}>
+                    <img src={item.src}/>
+                    <div className='info'>
+                        <h3>{item.caption}</h3>
+                        <p>{item.captionText}</p>
+                    </div>
+                  </div>
+              ))
+            }
+          </Slider>
+
           <div className="news">
             {
               news.map(newsItem => (

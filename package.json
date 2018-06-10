@@ -64,12 +64,14 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-show-more": "^1.1.1",
+    "react-slick": "^0.23.1",
     "react-tap-event-plugin": "^2.0.1",
     "react-viewmore": "^1.0.7",
     "reactstrap": "^6.1.0",
     "redux": "^3.7.1",
     "redux-form": "^7.0.0",
     "redux-thunk": "^2.2.0",
-    "seedrandom": "^2.4.3"
+    "seedrandom": "^2.4.3",
+    "slick-carousel": "^1.8.1"
   }
 }
