@@ -24,7 +24,7 @@ body {
 }
 
 .btn-primary {
-    background-color: rgb(0, 188, 212) !important;
+    background-color: #9b190e !important;
 }
 
 .btn-danger {
@@ -68,8 +68,8 @@ input::placeholder {
 .collapsible-header {
     font-weight: bold;
     font-family: 'Roboto', 'PT\ Sans', sans-serif;
-    line-height: 6rem;
-    font-size: 2rem;
+    line-height: 3rem;
+    font-size: 1rem;
 }
 
 .collapsible-body {
@@ -77,11 +77,11 @@ input::placeholder {
 }
 
 .collapsible-icon {
-    color: rgba(181, 135, 200, 1);
-    font-size: 2.6rem !important;
+    color: #9b190e;
+    font-size: 1.6rem !important;
     margin-right: 2.4rem !important;
     vertical-align: middle !important;
-    line-height: 6rem !important;
+    line-height: 3rem !important;
 }
 
 .collapsible-scroll {
@@ -170,6 +170,9 @@ button.dropdown-item {
     text-transform: capitalize;
 }
 
+.profile img {
+    border-radius: 45px;
+}
 /*News*/
 .slick-slider, .slide {
     height: 470px;
@@ -180,10 +183,62 @@ button.dropdown-item {
     width: 100%;
 }
 
-.slick-dots {
+.welcome .slick-dots {
     position: absolute;
     bottom: 0;
 }
+
+.welcome .slick-prev,
+.welcome .slick-next {
+    position: absolute;
+    top: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: transparent;
+    border: none;
+    font-size: 0px !important;
+    box-sizing: border-box;
+    outline: none;
+    z-index: 500;
+    background-repeat: no-repeat;
+}
+
+.welcome .slick-prev:before,
+.welcome .slick-next:before {
+    content: none;
+    color: white;
+}
+
+.welcome .slick-prev, .welcome .slick-prev:before {
+    left: 0;
+    background-image: url("../images/left.svg") !important;
+    color: white !important;
+}
+
+.welcome .slick-next, .welcome .slick-next:before {
+    right: 0;
+    background-image: url("../images/right.svg") !important;
+    color: white !important;
+}
+
+.welcome .slick-dots {
+    bottom: 5px;
+}
+
+.welcome .slick-dots li button:before {
+    font-size: 10px;
+    opacity: 1;
+    color: #fff;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+}
+
+.welcome .slick-dots li.slick-active button:before {
+    color: #9b190e !important;
+}
+
 
 .slide img {
     background-repeat: no-repeat;
@@ -199,9 +254,10 @@ button.dropdown-item {
     color: #fff;
     width: 600px !important;
     padding: 20px;
-    background-color: rgba(0, 188, 212, 0.72);
+    background-color: #9b190e;
+    opacity: 0.72;
     margin-top: 100px;
-    margin-left: 200px;
+    margin-left: 2%;
 }
 
 .news {
@@ -246,49 +302,13 @@ body {
     font-weight: bold;
 }
 
-.slick-prev,
-.slick-next {
-    position: absolute;
-    top: 50%;
-    width: 170px;
-    height: 170px;
-    background-color: transparent;
-    border: none;
-    font-size: 0px !important;
-    box-sizing: border-box;
-    outline: none;
-    z-index: 500;
-    background-repeat: no-repeat;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    content: none;
-    color: white;
-}
-
-.slick-prev, .slick-prev:before {
-    left: 0;
-    background-image: url("../images/left.svg") !important;
-    color: white !important;
-}
-
-.slick-next, .slick-next:before {
-    right: 0;
-    background-image: url("../images/right.svg") !important;
-    color: white !important;
-}
-
-.slick-dots {
-    bottom: 5px;
-}
-
-.slick-dots li button:before {
-    font-size: 10px;
-    opacity: 1;
+/*course details*/
+.collapsible-body a {
+    text-decoration: none;
     color: #fff;
+    padding: 0 0.5rem;
 }
 
-.slick-dots li.slick-active button:before {
-    color: rgb(0, 188, 212) !important;
+.bar, .bar div {
+    background-color: #9b190e!important;
 }

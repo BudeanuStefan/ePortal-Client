@@ -99,7 +99,7 @@ export function Login({registrationId, password, redirect = null, failed = null}
                 dispatch(userInfo());
 
                 if (!redirect) {
-                    return history.push('/welcome');
+                    return history.push('/view-courses');
                 }
                 else {
                     redirect();

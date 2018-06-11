@@ -157,14 +157,14 @@ class CartBanner extends Component {
 
         return (
             <div>
-                <div style={{textAlign: 'center', marginBottom: 6}}>
-                    <RaisedButton label="Buy" secondary={true} fullWidth={true}
-                                  onTouchTap={() => this.buyCourse()}/>
-                </div>
-                <div style={{textAlign: 'center', marginBottom: 6}}>
-                    <RaisedButton label="Add to Cart" size={40} primary={true} fullWidth={true}
-                                  onTouchTap={() => this.addToCart()}/>
-                </div>
+                {/*<div style={{textAlign: 'center', marginBottom: 6}}>*/}
+                    {/*<RaisedButton label="Buy" secondary={true} fullWidth={true}*/}
+                                  {/*onTouchTap={() => this.buyCourse()}/>*/}
+                {/*</div>*/}
+                {/*<div style={{textAlign: 'center', marginBottom: 6}}>*/}
+                    {/*<RaisedButton label="Add to Cart" size={40} primary={true} fullWidth={true}*/}
+                                  {/*onTouchTap={() => this.addToCart()}/>*/}
+                {/*</div>*/}
             </div>
         );
     };
@@ -204,9 +204,9 @@ class CartBanner extends Component {
                     <div style={{textAlign: 'center',marginTop: 6}}>
                         <RaisedButton label="Preview the Course" labelStyle={{textTransform: 'none'}} fullWidth={true}/>
                     </div>
-                    <div style={{textAlign: 'center', marginTop: 10, marginBottom: 10}}>
-                        <strong className="text-size-second text-black">${numberWithCommas(course.price)}</strong>
-                    </div>
+                    {/*<div style={{textAlign: 'center', marginTop: 10, marginBottom: 10}}>*/}
+                        {/*<strong className="text-size-second text-black">${numberWithCommas(course.price)}</strong>*/}
+                    {/*</div>*/}
                     {this.renderButton(course)}
                     </div>
                 </Paper>

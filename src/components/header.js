@@ -54,7 +54,7 @@ class Header extends Component {
 
     menuUser = () => {
         let avatar_image = `${hostUrl}/images/anonymous.png`;
-        let name = '';
+        let name = 'No logged in user';
         let registrationId = '';
         let level = '';
         let year = '';
@@ -89,7 +89,7 @@ class Header extends Component {
                         <p className="text-white text-bold" style={{height:12}}>{name}</p>
                         <p className="text-white" style={{height:12}}>{registrationId}</p>
                         <p className="text-white" style={{height:12}}>{specialization}</p>
-                        <p className="text-white" style={{height:12}}>{level}, {year}</p>
+                        <p className="text-white" style={{height:12}}>{level} {this.props.logged? ',': ''} {year}</p>
                     </div>
                 </div>
                 <div style={{height:10}}/>
@@ -133,27 +133,27 @@ class Header extends Component {
         }
     };
 
-    menuCart = (close) => {
-        if (this.props.logged) {
-            return (
-                <MenuItem primaryText={this.renderText(<div><i className="fa fa-shopping-cart" aria-hidden="true" style={{marginRight:10}}/><span>View Cart</span></div>)} onTouchTap={() => {
-                    this.props.history.push('/list-cart');
-                    if(close) this.handleClose();
-                }}/>
-            );
-        }
-    };
-
     menuCourses = (close) => {
         if (this.props.logged) {
             return (
-                <MenuItem primaryText={this.renderText(<div><i className="fa fa-graduation-cap" aria-hidden="true" style={{marginRight:10}}/><span>My Courses</span></div>)} onTouchTap={() => {
+                <MenuItem primaryText={this.renderText(<div><i className="fa fa-graduation-cap" aria-hidden="true" style={{marginRight:10}}/><span>Current Courses</span></div>)} onTouchTap={() => {
                     this.props.history.push('/view-courses');
                     if(close) this.handleClose();
                 }}/>
             );
         }
     };
+
+  menuHistoryCourses = (close) => {
+    if (this.props.logged) {
+      return (
+          <MenuItem primaryText={this.renderText(<div><i className="fa fa-leanpub" aria-hidden="true" style={{marginRight:10}}/><span>Previous Courses</span></div>)} onTouchTap={() => {
+            this.props.history.push('/view-previous-courses');
+            if(close) this.handleClose();
+          }}/>
+      );
+    }
+  };
 
     renderMore = () => {
         return (
@@ -166,7 +166,7 @@ class Header extends Component {
                     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
                 >
                     {this.menuCourses(false)}
-                    {this.menuCart(false)}
+                    {this.menuHistoryCourses(false)}
                     <MenuItem primaryText={this.renderText("Sign Up")} onTouchTap={() => {
                         this.props.history.push('/signup');
                     }}/>
@@ -178,7 +178,7 @@ class Header extends Component {
 
     renderNav = () => {
         return (
-            <div>
+            <div className='bar'>
                 <AppBar
                     title={<span onClick={this.handleHome} style={{cursor: "pointer"}}>ePortal</span>}
                     titleStyle={{textAlign: "center"}}
@@ -207,7 +207,7 @@ class Header extends Component {
                     <MenuItem innerDivStyle={{margin:0,padding:0}} primaryText={this.menuUser()}/>
                     <div className="divider"/>
                     {this.menuCourses(true)}
-                    {this.menuCart(true)}
+                    {this.menuHistoryCourses(true)}
                     <div className="divider"/>
                     <MenuItem primaryText={this.renderText("Sign Up")} onTouchTap={() => {
                         this.props.history.push('/signup');
