@@ -312,3 +312,26 @@ body {
 .bar, .bar div {
     background-color: #9b190e!important;
 }
+
+.course-img {
+    width: 100%;
+    height: 100%;
+    min-width: 260px;
+    min-height: 200px;
+}
+
+.wiki .wiki-item {
+    display: block;
+}
+
+.wiki i {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.wiki a {
+    text-decoration: none;
+    color: #9b190e;
+    display: inline-block;
+    font-size: 14px;
+}

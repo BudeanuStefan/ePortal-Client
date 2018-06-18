@@ -64,7 +64,6 @@ export function viewLecture(lecture_no=-1, header_no=-1, sub_no=-1) {
             }
         })
             .then(response => {
-                // console.log(response.data);
                 localStorage.setItem('url', response.data);
                 return history.push(`/lecture`);
             })

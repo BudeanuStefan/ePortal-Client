@@ -92,7 +92,6 @@ class Comment extends Component {
             const {page,limit} = this.state;
 
             this.props.resetComment();
-console.log(course_no, page, limit);
 
             setTimeout(() => {
                 this.props.listComment(course_no, page, limit);
@@ -215,7 +214,6 @@ console.log(course_no, page, limit);
     };
 
     commentPicture = (comment) => {
-        console.log(comment);
         if(comment._user) {
             return (
                 <img src={`${_.get(comment, '_user.profile.picture')}`} width="70px" height="70px" alt="" className="img-circle" style={{marginLeft:0,marginRight:0, verticalAlign:'middle'}}/>
@@ -368,7 +366,6 @@ _.get(comment, '_reply.content')} }/>
 
     renderList = () => {
         const {comments} = this.props;
-        console.log(comments);
         const {page,limit} = this.state;
 
         if (!comments) return (<div>&nbsp;</div>);

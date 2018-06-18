@@ -4,6 +4,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
+import {strings} from '../localization';
+
 import {signError, signUp} from '../actions';
 
 import path from 'path';
