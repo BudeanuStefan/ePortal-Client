@@ -189,7 +189,6 @@ class ViewLecture extends Component {
         rewind_15s.on('click', function() {
             const t = video[0].currentTime;
             const f = timeFormat(t);
-            console.log(t+":"+f);
 
             updateTime(video[0].currentTime-15);
         });
@@ -197,7 +196,6 @@ class ViewLecture extends Component {
         forward_15s.on('click', function() {
             const t = video[0].currentTime;
             const f = timeFormat(t);
-            console.log(t+":"+f);
 
             updateTime(video[0].currentTime+15);
         });

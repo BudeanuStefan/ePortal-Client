@@ -2,6 +2,10 @@ import _ from 'lodash';
 import dateFormat from 'dateformat';
 import {hostUrl} from '../../config';
 import React, {Component} from 'react';
+
+import {FacebookShareButton} from 'react-share';
+import { SocialIcon } from 'react-social-icons';
+
 import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {withRouter} from 'react-router-dom';
@@ -18,6 +22,7 @@ import CartBanner from './cart-banner';
 import Curriculum from './curriculum';
 import Comment from './comment';
 import Slider from "react-slick";
+
 
 import '../../styles/detail.css';
 
@@ -153,6 +158,26 @@ class DetailCourse extends Component {
     });
   };
 
+  renderWiki() {
+    return (
+        <Col className='wiki'>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Database from skratch </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Data Warehousing and Business Intelligence </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Data Warehousing Tutorial </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>SQL Basics for Beginners </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Design and Implement Dimensions and Fact Tables </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Implementing a Data Warehouse with SQL Server </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Star and Snowflake schema explained </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Data Warehousing Concepts  </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Data Warehouse Tutorial For Beginners </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>Data Warehouse Tutorial For Beginners </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>ETL Tutorial </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''> ETL Architecture In-Depth - Dimensional Modelling </a></div>
+          <div className='wiki-item'><i className="fa fa-link"></i><a href=''>What is Dimension and Fact in Data Warehouse </a></div>
+        </Col>
+    )
+  }
+
   renderCourse = () => {
     var settings = {
       dots: true,
@@ -233,32 +258,32 @@ class DetailCourse extends Component {
               <Col md="4" sm="12" xs="12">
                 <br/>
                 <br/>
-                <div className="text-size-second text-bold text-center">About the Teacher</div>
+                <div className="text-size-second text-bold text-center">Wiki</div>
                 <br/>
-                <Slider {...settings}>
-                  {this.renderAuthor(course._authors)}
-                </Slider>
+                {this.renderWiki()}
                 <br/>
               </Col>
             </Row>
           </Col>
 
-          {/*<div className="container">*/}
-          {/*<div className="row body-content">*/}
-          {/*<div className="col-sm-offset-1 col-sm-10">*/}
-          {/*<br/>*/}
-          {/*<br/>*/}
-          {/*<div className="text-size-second text-bold text-center">About the Teacher</div>*/}
-          {/*</div>*/}
-          {/*</div>*/}
-          {/*<br/>*/}
-          {/*</div>*/}
-          {/*<div className="container">*/}
-          {/*{this.renderAuthor(course._authors)}*/}
-          {/*<br/>*/}
-          {/*</div>*/}
-
+          <div className="container">
+          <Row>
+            <Col md="12" sm="12" xs="12">
+              <br/>
+              <br/>
+              <div className="text-size-second text-bold text-center">About the Teacher</div>
+              <br/>
+              <Slider {...settings}>
+                {this.renderAuthor(course._authors)}
+              </Slider>
+              <br/>
+            </Col>
+          </Row>
+          </div>
           <br/>
+
+          <FacebookShareButton url='https://www.facebook.com/GaborEliza'/>
+          <SocialIcon url="https://www.facebook.com/GaborEliza" />
           <div className="container">
             <Comment/>
           </div>

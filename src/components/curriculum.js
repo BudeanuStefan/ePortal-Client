@@ -105,7 +105,6 @@ class Curriculum extends Component {
   };
 
   handleViewLecture = (event, header, body, learn) => {
-    console.log('hn:' + header.no + ':bn:' + body.sub_no + ':content:' + body.content);
     event.preventDefault();
 
     if (learn) {

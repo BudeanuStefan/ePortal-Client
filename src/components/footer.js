@@ -25,7 +25,7 @@ class Footer extends Component {
                 <RaisedButton
                     label="Copyright ©"
                     onTouchTap={() => {
-                        this.props.history.push('/welcome');
+                        this.props.history.push('/');
                     }}
                 />
             </div>

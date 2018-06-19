@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {connect} from 'react-redux';
+import {strings} from "../localization";
+
 import {fetchMessage} from '../actions';
 import NewsItem from './news-item';
 
@@ -13,22 +15,21 @@ const items = [
   {
     id: 1,
     src: '../../images/feaa-b.png',
-    altText: 'FEAA ',
-    caption: 'Biblioteca organizeaza concurs destinat studentilor',
-    captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
+    caption: strings.slide1caption,
+    captionText: strings.captionText
   },
   {
     id: 2,
     src: '../../images/main1.png',
-    caption: 'Bun venit la UAIC!',
-    captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
+    caption: strings.slide2caption,
+    captionText: strings.captionText
   },
   {
     id: 3,
     src: '../../images/slide0.png',
     altText: 'licitatie',
-    caption: 'Bun venit la UAIC!',
-    captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan odio aliquet ex pretium, non elementum risus vestibulum. '
+    caption: strings.slide2caption,
+    captionText: strings.captionText
   }
 ];
 

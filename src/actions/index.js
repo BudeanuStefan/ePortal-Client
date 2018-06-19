@@ -79,7 +79,7 @@ export function signUp({registrationId, email, password, name, avatar, yearOfStu
                 dispatch(signIn());
                 dispatch(userInfo());
 
-                return history.push('/welcome');
+                return history.push('/');
             })
             .catch(response => {
                 if(failed) failed();

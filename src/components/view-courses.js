@@ -129,7 +129,7 @@ class ViewCourses extends Component {
 
     listCourse = (course) => {
         return (
-            <div onClick={(e) => this.handleCourse(e, course)} style={{
+            <div className='course' onClick={(e) => this.handleCourse(e, course)} style={{
                 width: '100%',
                 height: '100%',
                 cursor:"pointer"
@@ -143,12 +143,12 @@ class ViewCourses extends Component {
                 }}>
                     <div
                         style={{marginLeft: 3, marginRight: 3, marginTop: 12, marginBottom: 8, overflow: 'hidden'}}>
-                        <img style={{width: '100%', height: '100%'}} src={`${hostUrl}/images/${course.picture}`}/>
+                        <img className='course-img' src={`${hostUrl}/images/${course.picture}`}/>
                     </div>
-                    <hr/>
-                    <div className="text-size-fifth">
-                        {this.authorNames(course._authors)}
-                    </div>
+                    {/*<hr/>*/}
+                    {/*<div className="text-size-fifth">*/}
+                        {/*{this.authorNames(course._authors)}*/}
+                    {/*</div>*/}
                     <hr/>
                     <div className="text-size-fifth text-bold">{course.title}</div>
                     <div className="text-size-fifth">{course.subtitle}</div>
@@ -160,7 +160,7 @@ class ViewCourses extends Component {
     listCourses = (lists) => {
         return _.map(lists, (course, i) => {
             return (
-                <div key={i} className="col-sm-4">
+                <div key={i} className="col-sm-2">
                     {this.listCourse(course)}
                 </div>
             );
@@ -180,13 +180,11 @@ class ViewCourses extends Component {
             }
 
             const rows =_.map(courses, (course, i) => {
-                if ((i % 3) === 0) {
-                    const lists = _.slice(courses, i, i+3);
+                if ((i % 5) === 0) {
+                    const lists = _.slice(courses, i, i+5);
                     return (
                             <div key={i} className="row" style={{marginBottom:20}}>
-                                <Equalizer byRow={true}>
                                     {this.listCourses(lists)}
-                                </Equalizer>
                             </div>
                     );
                 }
