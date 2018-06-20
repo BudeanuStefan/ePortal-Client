@@ -41,4 +41,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root'));
 
-// ReactDOM.render(<div>Hello</div>, document.getElementById('root'));

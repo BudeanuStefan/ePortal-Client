@@ -213,7 +213,7 @@ class Curriculum extends Component {
                     className="material-icons collapsible-icon">add_box</i>{header.title}</div>
                 {this.lectureBody(header)}
                 {header.testLink ? <div className="collapsible-body course-test">
-                  <div className="col-sm-7 text-left"><a href={header.testLink} target='_blank' className="btn btn-lg btn-default">Take the test</a></div>
+                  <div className="col-sm-7 text-left"><a href={header.testLink} target='_blank' className="btn btn-lg btn-default test">Take the test</a></div>
                 </div> : ''}
               </li>
           )

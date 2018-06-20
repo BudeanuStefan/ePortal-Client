@@ -6,7 +6,6 @@ import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {buyCourse, addCart} from '../actions/cart';
 import {userInfo} from '../actions';
 
 import {hostUrl} from '../../config';
@@ -38,7 +37,7 @@ const styles = {
     }
 };
 
-class CartBanner extends Component {
+class CourseBanner extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -73,30 +72,6 @@ class CartBanner extends Component {
     learn = () => {
         if (this.props.logged) {
             const {course} = this.props;
-
-            this.props.buyCourse(course.no);
-        }
-        else {
-            this.handleOpen();
-        }
-    };
-
-    buyCourse = () => {
-        if (this.props.logged) {
-            const {course} = this.props;
-
-            this.props.buyCourse(course.no);
-        }
-        else {
-            this.handleOpen();
-        }
-    };
-
-    addToCart = () => {
-        if (this.props.logged) {
-            const {course} = this.props;
-
-            this.props.addCart(course.no);
         }
         else {
             this.handleOpen();
@@ -120,51 +95,6 @@ class CartBanner extends Component {
                     <br/>
                     <br/>
                 </Dialog>
-            </div>
-        );
-    };
-
-    renderButton = (course) => {
-        const {user} = this.props;
-
-        let filtered = null;
-
-        if (course) {
-            if (user) {
-                filtered = user.courses.filter(function (_course) {
-                    if (_course.no === course.no) {
-                        return _course;
-                    }
-                });
-            }
-        }
-
-        if(filtered) {
-            if (filtered.length > 0) {
-                if (filtered[0].learn) {
-                    return (
-                        <div>
-                            <div style={{textAlign: 'center', marginBottom: 6}}>
-                                <RaisedButton label="Learn the Course" labelStyle={{textTransform: 'none'}}
-                                              primary={true}
-                                              fullWidth={true} onTouchTap={() => this.learn()}/>
-                            </div>
-                        </div>
-                    );
-                }
-            }
-        }
-
-        return (
-            <div>
-                {/*<div style={{textAlign: 'center', marginBottom: 6}}>*/}
-                    {/*<RaisedButton label="Buy" secondary={true} fullWidth={true}*/}
-                                  {/*onTouchTap={() => this.buyCourse()}/>*/}
-                {/*</div>*/}
-                {/*<div style={{textAlign: 'center', marginBottom: 6}}>*/}
-                    {/*<RaisedButton label="Add to Cart" size={40} primary={true} fullWidth={true}*/}
-                                  {/*onTouchTap={() => this.addToCart()}/>*/}
-                {/*</div>*/}
             </div>
         );
     };
@@ -204,10 +134,6 @@ class CartBanner extends Component {
                     <div style={{textAlign: 'center',marginTop: 6}}>
                         <RaisedButton label="Preview the Course" labelStyle={{textTransform: 'none'}} fullWidth={true}/>
                     </div>
-                    {/*<div style={{textAlign: 'center', marginTop: 10, marginBottom: 10}}>*/}
-                        {/*<strong className="text-size-second text-black">${numberWithCommas(course.price)}</strong>*/}
-                    {/*</div>*/}
-                    {this.renderButton(course)}
                     </div>
                 </Paper>
             </div>
@@ -233,10 +159,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        buyCourse: (course_no) => dispatch(buyCourse(course_no)),
-        addCart: (course_no) => dispatch(addCart(course_no)),
         userInfo: () => dispatch(userInfo())
     }
 };
 
-export default CartBanner = withRouter(connect(mapStateToProps, mapDispatchToProps)(CartBanner));
+export default CourseBanner = withRouter(connect(mapStateToProps, mapDispatchToProps)(CourseBanner));
