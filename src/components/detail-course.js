@@ -3,9 +3,6 @@ import dateFormat from 'dateformat';
 import {hostUrl} from '../../config';
 import React, {Component} from 'react';
 
-import {FacebookShareButton} from 'react-share';
-import { SocialIcon } from 'react-social-icons';
-
 import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {withRouter} from 'react-router-dom';
@@ -18,7 +15,7 @@ import ShowMore from 'react-show-more';
 
 import Header from './header';
 import Footer from './footer';
-import CartBanner from './cart-banner';
+import CourseBanner from './course-banner';
 import Curriculum from './curriculum';
 import Comment from './comment';
 import Slider from "react-slick";
@@ -118,10 +115,26 @@ class DetailCourse extends Component {
 
       return (
           <Col key={i}>
+            {/*<Row>*/}
+              {/*<div className="col-sm-12">*/}
+                {/*<div className="text-size-fifth text-emphasis-fourth text-bold">{author.name}</div>*/}
+                {/*<div className="text-size-sixth">*/}
+                  {/*<ShowMore*/}
+                      {/*lines={5}*/}
+                      {/*more='Show more'*/}
+                      {/*less='Show less'*/}
+                      {/*anchorClass=''*/}
+                  {/*>*/}
+                    {/*<div dangerouslySetInnerHTML={{__html: unescape(author.description)}}/>*/}
+                  {/*</ShowMore>*/}
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</Row>*/}
             <Row>
               <Col>
-                <div><img src={`${hostUrl}/images/${author.avatar}`}/></div>
+                <div><img className='author-image' src={`${hostUrl}/images/${author.avatar}`}/></div>
                 <br/>
+                <div className="text-size-fifth text-emphasis-fourth text-bold">{author.name}</div>
                 <div><span className="text-size-third text-bold">{author.average}</span> <span
                     className="text-size-fourth">Average rating</span></div>
                 <div><i className="fa fa-home text-emphasis-second"/><span
@@ -133,22 +146,6 @@ class DetailCourse extends Component {
                     className="text-size-fourth">Courses</span></div>
                 <br/>
               </Col>
-            </Row>
-
-            <Row>
-              <div className="col-sm-12">
-                <div className="text-size-fifth text-emphasis-fourth text-bold">{author.name}</div>
-                <div className="text-size-sixth">
-                  <ShowMore
-                      lines={5}
-                      more='Show more'
-                      less='Show less'
-                      anchorClass=''
-                  >
-                    <div dangerouslySetInnerHTML={{__html: unescape(author.description)}}/>
-                  </ShowMore>
-                </div>
-              </div>
             </Row>
             <Row>
               <div className="text-white">{decorator}</div>
@@ -223,7 +220,7 @@ class DetailCourse extends Component {
                     <div style={{marginTop: 30}} className="hidden-xs">
                     </div>
                     <br/>
-                    <CartBanner course={course}/>
+                    <CourseBanner course={course}/>
                   </div>
                 </div>
                 <div className="row body-content hidden-xs">
@@ -281,9 +278,6 @@ class DetailCourse extends Component {
           </Row>
           </div>
           <br/>
-
-          <FacebookShareButton url='https://www.facebook.com/GaborEliza'/>
-          <SocialIcon url="https://www.facebook.com/GaborEliza" />
           <div className="container">
             <Comment/>
           </div>

@@ -96,7 +96,7 @@ class Welcome extends Component {
   }
 
   render() {
-
+    const {activeIndex} = this.state;
     var settings = {
       dots: true,
       infinite: true,

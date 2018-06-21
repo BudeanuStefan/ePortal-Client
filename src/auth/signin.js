@@ -77,7 +77,6 @@ class Signin extends Component {
                 if(!isSubmitting) {
                     $('#submit').html('<img src="/public/assets/images/spinner.gif"/>');
                     this.setState({isSubmitting:true});
-                    return <Redirect to='/'  />;
                 }
 
                 const failed = () => {

@@ -12,9 +12,6 @@ import {fetchCourseDone} from './course';
 import {paginate} from './course';
 import {fetchDetailCourseDone} from './course';
 
-import {fetchCartError} from './cart';
-import {fetchCartList} from './cart';
-
 import lecture from './lecture';
 
 import {fetchCommentError} from './comment';
@@ -33,8 +30,6 @@ const rootReducer = combineReducers({
     fetchCourseDone,
     paginate,
     fetchDetailCourseDone,
-    fetchCartError,
-    fetchCartList,
     lecture,
     fetchCommentError,
     fetchCommentLoading,

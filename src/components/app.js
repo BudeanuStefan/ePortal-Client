@@ -33,7 +33,6 @@ export default class App extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div>
                     <Header {...this.props}/>
-                    {/*<SearchCourse/>*/}
                     <br/>
                     <div>
                         Welcome to ePortal application! You will find here all your courses, updates,

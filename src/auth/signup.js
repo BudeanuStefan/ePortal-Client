@@ -335,6 +335,8 @@ class Signup extends Component {
     const optionsLevels = ['Licenta', 'Master', 'Doctorat'];
     let options = this.renderOptions(this.state.selectedLevel);
 
+    console.log(this.state.selectedLevel);
+    console.log(options);
     const defaultOptionLevel = 'Please choose your level of study';
     const defaultOptionYear = 'Please choose your year of study';
     const defaultSpecialization = 'Please choose your specialization';
