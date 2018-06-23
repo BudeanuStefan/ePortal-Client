@@ -6,7 +6,6 @@ import Dialog from 'material-ui/Dialog';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
 import Moment from 'react-moment';
-import Rating from 'react-rating';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {resetComment, listComment, removeComment, toggleHelpful} from '../actions/comment';
@@ -107,19 +106,6 @@ class Comment extends Component {
     this.setState({open: false});
   };
 
-  showMore = () => {
-    const {total} = this.props;
-    const {course_no, limit} = this.state;
-
-    let _page = this.state.page + 1;
-    if (_page >= total) {
-      _page = total;
-    }
-    this.setState({page: _page});
-
-    this.props.listComment(course_no, _page, limit);
-  };
-
   commentRemove = (comment) => {
     if (this.props.logged) {
       if (this._alert) {
@@ -204,7 +190,7 @@ class Comment extends Component {
 <span>
                                             <FlatButton
                                                 primary={true}
-                                                label="Rate the Course"
+                                                label="Leave a comment"
                                                 labelStyle={{fontSize: '1.4rem'}}
                                                 onTouchTap={() => {
                                                   this.reviewComment()
@@ -298,32 +284,23 @@ class Comment extends Component {
     }
   };
 
-  commentMark = (comment) => {
-    return (
-        <div className='no-display'>
-          <span className="text-size-third">Mark as:   </span>
-          <span>
-                                            <FlatButton
-                                                primary={comment.helpful}
-                                                label="Helpful"
-                                                labelStyle={{fontSize: '1.4rem'}}
-                                                onTouchTap={() => {
-                                                  this.toggleHelpful(comment)
-                                                }}/>
-                                        </span>
-          <span>
+    commentMark = (comment) => {
+      console.log(comment, this.props);
+        return (
+            <div className='no-display'>
+                {comment._user.no === this.props.user.no ? <span>
                                             <FlatButton label="Delete"
                                                         labelStyle={{fontSize: '1.4rem'}}
                                                         onTouchTap={() => {
-                                                          this.commentRemove(comment)
+                                                            this.commentRemove(comment)
                                                         }}/>
 
-                                        </span>
-        </div>
-    );
-  };
+                                        </span> : ''}
+            </div>
+        );
+    };
 
-  listComment = (comment) => {
+    listComment = (comment) => {
     console.log(comment);
     return (
         <div>
@@ -353,14 +330,6 @@ class Comment extends Component {
                 </div>
                 <div className="col-sm-9">
                   <div className='no-display' style={{textAlign: 'right'}}>
-                    <Rating
-                        placeholderRate={comment.rating}
-                        fractions={2}
-                        readonly={true}
-                        empty={<img src={`/public/assets/images/star-grey.png`} className="icon"/>}
-                        placeholder={<img src={`/public/assets/images/star-yellow.png`} className="icon"/>}
-                        full={<img src={`/public/assets/images/star-yellow.png`} className="icon"/>}
-                    />
                   </div>
                   <div style={{marginLeft: 10, marginRight: 10, marginTop: 12, marginBottom: 12}}>
                     {this.commentContent(comment)}
@@ -401,14 +370,6 @@ class Comment extends Component {
           marginTop: 15,
           marginBottom: 15
         }} >
-        < button
-          type="button"
-          name="showmore"
-          className="btn btn-lg btn-block show-more"
-          onClick={(e) => {
-          e.preventDefault();
-          this.showMore();
-        }}>Show More</button>
           </div>
           );
           };

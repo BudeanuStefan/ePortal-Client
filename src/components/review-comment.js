@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Dialog from 'material-ui/Dialog';
 import Paper from 'material-ui/Paper';
-import Rating from 'react-rating';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
@@ -106,10 +105,9 @@ class ReviewComment extends Component {
 
             if(isSubmitting) return;
 
-            const {rating} = this.state;
             const {content} = values;
 
-            if (rating && content) {
+            if (content) {
                 if(!isSubmitting) {
                     $('#submit').html('<img src="/public/assets/images/spinner.gif"/>');
                     this.setState({isSubmitting:true});
@@ -128,7 +126,7 @@ class ReviewComment extends Component {
 
                     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
                     return sleep(300).then(() => {
-                        this.props.addComment(course_no, page, limit, content, rating, helpful, failed);
+                        this.props.addComment(course_no, page, limit, content, helpful, failed);
                     });
                 }
             }
@@ -181,27 +179,6 @@ class ReviewComment extends Component {
         );
     };
 
-    renderRating = () => {
-        const {rating} = this.state;
-
-        return (
-            <div>
-                <div style={{textAlign: 'center', marginTop:30}}>
-                    <Rating
-                        ref={(e) => this._rating = e}
-                        fractions={2}
-                        placeholderRate={rating}
-                        readonly={false}
-                        empty={<img src={`/public/assets/images/star-grey.png`} className="icon" />}
-                        placeholder={<img src={`/public/assets/images/star-yellow.png`} className="icon" />}
-                        full={<img src={`/public/assets/images/star-yellow.png`} className="icon" />}
-                        onClick={this.onRatingClick}
-                    />
-                </div>
-            </div>
-        );
-    };
-
     renderForm = () => {
         const {handleSubmit, pristine, reset, submitting} = this.props;
 
@@ -212,12 +189,12 @@ class ReviewComment extends Component {
                 </div>
                 <div style={this.state.dialogStyle}>
                     <form onSubmit={handleSubmit(this.submitForm)} noValidate autoComplete="off">
-                        <div style={{width:'300px'}}>
+                        <div style={{width:'400px'}}>
                             <Field
                                 name="content"
                                 type="text"
                                 component={this.renderTextField}
-                                label="Review"
+                                label="Review: "
                                 placeholder="You can use multiline."
                                 multiLine={true}
                             />
@@ -273,9 +250,8 @@ class ReviewComment extends Component {
                                     display: 'block'
                                 }}>
                                     <br/>
-                                    <div className="text-size-second text-bold" style={{textAlign: 'center'}}>Share your opinion about the quality of this course.</div>
+                                    <div className="text-size-second text-bold" style={{textAlign: 'center'}}>Leave a comment for this course.</div>
                                     <br/>
-                                    {this.renderRating()}
                                     {this.renderForm()}
                                 </Paper>
                             </div>

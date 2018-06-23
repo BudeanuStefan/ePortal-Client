@@ -11,7 +11,6 @@ import {fetchDetailCourse} from '../actions/course';
 import centerComponent from 'react-center-component';
 import CircularProgress from 'material-ui/CircularProgress';
 import {Row, Col} from 'reactstrap';
-import ShowMore from 'react-show-more';
 
 import Header from './header';
 import Footer from './footer';
@@ -115,31 +114,11 @@ class DetailCourse extends Component {
 
       return (
           <Col key={i}>
-            {/*<Row>*/}
-              {/*<div className="col-sm-12">*/}
-                {/*<div className="text-size-fifth text-emphasis-fourth text-bold">{author.name}</div>*/}
-                {/*<div className="text-size-sixth">*/}
-                  {/*<ShowMore*/}
-                      {/*lines={5}*/}
-                      {/*more='Show more'*/}
-                      {/*less='Show less'*/}
-                      {/*anchorClass=''*/}
-                  {/*>*/}
-                    {/*<div dangerouslySetInnerHTML={{__html: unescape(author.description)}}/>*/}
-                  {/*</ShowMore>*/}
-                {/*</div>*/}
-              {/*</div>*/}
-            {/*</Row>*/}
             <Row>
               <Col>
                 <div><img className='author-image' src={`${hostUrl}/images/${author.avatar}`}/></div>
                 <br/>
                 <div className="text-size-fifth text-emphasis-fourth text-bold">{author.name}</div>
-                <div><span className="text-size-third text-bold">{author.average}</span> <span
-                    className="text-size-fourth">Average rating</span></div>
-                <div><i className="fa fa-home text-emphasis-second"/><span
-                    className="text-size-third text-bold">{numberWithCommas(author.reviews)}</span> <span
-                    className="text-size-fourth">Reviews</span></div>
                 <div><span className="text-size-third text-bold">{numberWithCommas(author.students)}</span> <span
                     className="text-size-fourth">Students</span></div>
                 <div><span className="text-size-third text-bold">{numberWithCommas(author.courses)}</span> <span
@@ -203,10 +182,6 @@ class DetailCourse extends Component {
                     <div className="text-white text-size-first">{course.title}</div>
                     <br/>
                     <div className="text-white text-size-second">{course.subtitle}</div>
-                    <div className="text-white text-size-third">rating: <span
-                        className="text-emphasis-first">{course.average}</span> (<span
-                        className="text-emphasis-second">{numberWithCommas(course.reviews)}</span> reviews)
-                    </div>
                     <div className="text-white text-size-third text"><span
                         className="text-emphasis-third">{numberWithCommas(course.enrolled)}</span> students enrolled
                     </div>
@@ -239,15 +214,6 @@ class DetailCourse extends Component {
                 <br/>
                 <br/>
                 <div className="text-size-second text-bold">Description</div>
-                <br/>
-                <ShowMore
-                    lines={5}
-                    more='Show more'
-                    less='Show less'
-                    anchorClass=''
-                >
-                  <div dangerouslySetInnerHTML={{__html: unescape(course.description)}}/>
-                </ShowMore>
                 <br/>
                 <br/>
                 <Curriculum/>
