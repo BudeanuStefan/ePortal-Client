@@ -5,3 +5,25 @@
 @media screen and (min-width: 1024px) and (max-width: 1399px) {
 
 }
+
+@media screen and (max-width: 768px) {
+    .no-display {
+        display: none;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .slick-slider, .slide {
+        height: auto!important;
+    }
+
+    .slick-arrow {
+        display: none!important;
+    }
+
+    .news .media {
+        width: 100%!important;
+    }
+}

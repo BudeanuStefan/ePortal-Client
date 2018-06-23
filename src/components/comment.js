@@ -19,7 +19,7 @@ import AlertDialog from './alert-dialog';
 import SignIn from '../auth/signin';
 
 import '../../styles/detail.css';
-
+import '../../styles/responsive.css';
 const styles = {
   dialogRoot: {
     display: "flex",
@@ -215,16 +215,15 @@ class Comment extends Component {
   };
 
   commentPicture = (comment) => {
-    if (comment._user) {
       return (
           <img src={`${_.get(comment, '_user.profile.picture')}`} width="70px" height="70px" alt=""
                className="img-circle" style={{marginLeft: 0, marginRight: 0, verticalAlign: 'middle'}}/>
       );
-    }
   };
 
   commentDate = (comment) => {
-    if (comment._user) {
+    console.log(comment);
+    if (comment) {
       return (
           <p className="text-size-fifth">
             <Moment fromNow ago>{comment.date}</Moment> ago</p>
@@ -233,21 +232,18 @@ class Comment extends Component {
   };
 
   commentName = (comment) => {
-    if (comment._user) {
+    console.log(comment);
       return (
           <p className="text-size-fifth">{_.get(comment, '_user.profile.name')}</p>
       );
-    }
   };
 
   commentContent = (comment) => {
-    if (comment._user) {
       return (
           <div>
             <p className="text-size-fifth text-bold" dangerouslySetInnerHTML={{__html: comment.content}}/>
           </div>
       );
-    }
   };
 
   commentReplyDate = (comment) => {
@@ -304,7 +300,7 @@ class Comment extends Component {
 
   commentMark = (comment) => {
     return (
-        <div>
+        <div className='no-display'>
           <span className="text-size-third">Mark as:   </span>
           <span>
                                             <FlatButton
@@ -328,6 +324,7 @@ class Comment extends Component {
   };
 
   listComment = (comment) => {
+    console.log(comment);
     return (
         <div>
           <br/>
@@ -341,21 +338,21 @@ class Comment extends Component {
           }}>
             <div className="container-fluid">
               <div className="row" style={{marginTop: 20}}>
-                <div className="col-sm-5">
+                <div className="col-sm-3">
                   <div style={{marginLeft: 3, marginRight: 3, marginTop: 8, marginBottom: 8, overflow: 'hidden'}}>
-                    <div className="row">
-                      <div className="col-xs-4">
+                    <div className="row wrapper-user">
+                      <div className="col-xs-4 picture">
                         {this.commentPicture(comment)}
                       </div>
-                      <div className="col-xs-8">
+                      <div className="col-xs-8 left-text">
                         {this.commentDate(comment)}
                         {this.commentName(comment)}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-7">
-                  <div style={{textAlign: 'center'}}>
+                <div className="col-sm-9">
+                  <div className='no-display' style={{textAlign: 'right'}}>
                     <Rating
                         placeholderRate={comment.rating}
                         fractions={2}

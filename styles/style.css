@@ -350,3 +350,15 @@ body {
     line-height: 30px;
     font-size: 13px;
 }
+
+.wrapper-user {
+    margin-top: 15%;
+}
+
+.picture {
+    margin: 0 auto;
+}
+
+.left-text {
+    margin: 0 auto;
+}
