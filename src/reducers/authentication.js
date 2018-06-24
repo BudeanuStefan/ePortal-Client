@@ -7,7 +7,6 @@ import {
 } from '../actions';
 
 export default function (state = {error: '', logged: false, user: null}, action) {
-    console.log(action);
     switch (action.type) {
         case USER_INFO:
             return {...state, user: action.user};

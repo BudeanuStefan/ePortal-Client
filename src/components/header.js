@@ -31,7 +31,6 @@ class Header extends Component {
   }
 
   onSelect(selectedItem) {
-    console.log(selectedItem);
     strings.setLanguage(selectedItem.value);
     this.props.history.replace('/');
   }

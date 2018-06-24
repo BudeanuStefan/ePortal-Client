@@ -208,7 +208,6 @@ class Comment extends Component {
   };
 
   commentDate = (comment) => {
-    console.log(comment);
     if (comment) {
       return (
           <p className="text-size-fifth">
@@ -218,7 +217,6 @@ class Comment extends Component {
   };
 
   commentName = (comment) => {
-    console.log(comment);
       return (
           <p className="text-size-fifth">{_.get(comment, '_user.profile.name')}</p>
       );
@@ -285,7 +283,6 @@ class Comment extends Component {
   };
 
     commentMark = (comment) => {
-      console.log(comment, this.props);
         return (
             <div className='no-display'>
                 {comment._user.no === this.props.user.no ? <span>
@@ -301,7 +298,6 @@ class Comment extends Component {
     };
 
     listComment = (comment) => {
-    console.log(comment);
     return (
         <div>
           <br/>

@@ -67,21 +67,23 @@ export function signUp({registrationId, email, password, name, avatar, yearOfStu
     formData.append('yearOfStudy', yearOfStudy);
     formData.append('specialization', specialization);
     formData.append('level', level);
-
+  console.log(formData);
     if (avatar) {
       formData.append('avatar', avatar);
     }
 
     axios.post(`${hostUrl}/signup`, formData)
         .then(response => {
+          console.log(response);
           localStorage.setItem('token', response.data.token);
 
           dispatch(signIn());
           dispatch(userInfo());
 
-          return history.push('/');
+          //return history.push('/view-courses');
         })
         .catch(response => {
+          console.log('error', response);
           if (failed) failed();
           return dispatch(signError(response.message));
         });
@@ -89,7 +91,6 @@ export function signUp({registrationId, email, password, name, avatar, yearOfStu
 }
 
 export function Login({registrationId, password, redirect = null, failed = null}) {
-  console.log('rom login', registrationId, password, redirect, failed);
   return function (dispatch) {
 
     axios.post(`${hostUrl}/signin`, {registrationId, password})

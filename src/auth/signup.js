@@ -118,7 +118,7 @@ class Signup extends Component {
             $('#submit').html('Submit');
             this.setState({isSubmitting: false});
           };
-
+console.log(this.state.isSubmitting);
           let avatar = null;
 
           if (fileToUpload) {
@@ -308,7 +308,7 @@ class Signup extends Component {
   renderOptions(level) {
     let options;
     switch (level) {
-      case 'Bachelor':
+      case 'Licenta':
         options = {
           year: ["1", "2", "3", "4"],
           specialization: ["Informatică Economică", "Contabilitate si informatica de gestiune", "Finante si banci", "Marketing", "Management"]
@@ -320,7 +320,7 @@ class Signup extends Component {
           specialization: ["Software Development and Business Information Systems", "Sisteme informaționale pentru afaceri", "Analiza si strategii de marketing", "Banci si piete financiare", "Contabilitate, expertiza si audit"]
         };
         return options;
-      case 'Doctor':
+      case 'Doctorat':
         options = {
           year: ["1", "2", "3"],
           specialization: ["Cibernetica si Statistica", "Contabilitate", "Economie", "Informatica Economica"]
@@ -335,7 +335,6 @@ class Signup extends Component {
     const optionsLevels = ['Licenta', 'Master', 'Doctorat'];
     let options = this.renderOptions(this.state.selectedLevel);
 
-    console.log(this.state.selectedLevel);
     console.log(options);
     const defaultOptionLevel = 'Please choose your level of study';
     const defaultOptionYear = 'Please choose your year of study';
