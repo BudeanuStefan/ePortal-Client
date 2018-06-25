@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e529cfef-e0c1-4029-9fac-30d4f995a903" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/Course_presentation_1.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/close.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/components/curriculum.js" afterPath="$PROJECT_DIR$/src/components/curriculum.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/view-courses.js" afterPath="$PROJECT_DIR$/src/components/view-courses.js" />
-      <change beforePath="$PROJECT_DIR$/styles/collapsible.css" afterPath="$PROJECT_DIR$/styles/collapsible.css" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/auth/signup.js" afterPath="$PROJECT_DIR$/src/auth/signup.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/comment.js" afterPath="$PROJECT_DIR$/src/components/comment.js" />
+      <change beforePath="$PROJECT_DIR$/styles/responsive.css" afterPath="$PROJECT_DIR$/styles/responsive.css" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="275" column="79" lean-forward="false" selection-start-line="275" selection-start-column="79" selection-end-line="275" selection-end-column="79" />
+            <state relative-caret-position="443">
+              <caret line="393" column="37" lean-forward="false" selection-start-line="393" selection-start-column="37" selection-end-line="393" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -57,8 +56,28 @@
       <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/responsive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/auth/signup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="220" column="15" lean-forward="false" selection-start-line="220" selection-start-column="15" selection-end-line="220" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -74,14 +93,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curriculum.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="curriculum.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/curriculum.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="199" column="55" lean-forward="true" selection-start-line="199" selection-start-column="55" selection-end-line="199" selection-end-column="55" />
+            <state relative-caret-position="319">
+              <caret line="204" column="20" lean-forward="false" selection-start-line="204" selection-start-column="20" selection-end-line="204" selection-end-column="20" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/comment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="288" column="55" lean-forward="false" selection-start-line="288" selection-start-column="55" selection-end-line="288" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,8 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CartBanner</find>
-      <find>buyCourse</find>
       <find>addCart</find>
       <find>cart</find>
       <find>facebook</find>
@@ -119,7 +146,6 @@
       <find>css</find>
       <find>rating</find>
       <find>Media</find>
-      <find>delete</find>
       <find>console.log</find>
       <find>defaultOptionLevel</find>
       <find>cubic+</find>
@@ -130,6 +156,9 @@
       <find>sample.pdf</find>
       <find>here</find>
       <find>preview</find>
+      <find>spinner.gif</find>
+      <find>delete</find>
+      <find>avatar image</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Personal\Disertatie\app\ePortal-Client</dir>
@@ -178,16 +207,16 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/course-banner.js" />
         <option value="$PROJECT_DIR$/src/components/detail-course.js" />
-        <option value="$PROJECT_DIR$/styles/responsive.css" />
-        <option value="$PROJECT_DIR$/src/components/comment.js" />
         <option value="$PROJECT_DIR$/src/components/header.js" />
         <option value="$PROJECT_DIR$/src/reducers/authentication.js" />
-        <option value="$PROJECT_DIR$/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/auth/signup.js" />
         <option value="$PROJECT_DIR$/styles/collapsible.css" />
-        <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/src/components/view-courses.js" />
         <option value="$PROJECT_DIR$/src/components/curriculum.js" />
+        <option value="$PROJECT_DIR$/src/components/comment.js" />
+        <option value="$PROJECT_DIR$/styles/style.css" />
+        <option value="$PROJECT_DIR$/styles/responsive.css" />
+        <option value="$PROJECT_DIR$/src/auth/signup.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
       </list>
     </option>
   </component>
@@ -253,6 +282,13 @@
             <path>
               <item name="ePortal-Client" type="b2602c69:ProjectViewProjectNode" />
               <item name="ePortal-Client" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ePortal-Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ePortal-Client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,11 +342,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Personal\Disertatie\app\ePortal-Client\public\assets\images" />
       <recent name="D:\Personal\Disertatie\app\ePortal-Client\src\components" />
       <recent name="D:\Personal\Disertatie\app\ePortal-Client\public\assets" />
       <recent name="D:\Personal\Disertatie\app\ePortal-Client\src\images" />
       <recent name="D:\Personal\Disertatie\app\ePortal-Client\src" />
-      <recent name="D:\Personal\Disertatie\app\ePortal-Client\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -593,7 +629,7 @@
       <workItem from="1529786492767" duration="312000" />
       <workItem from="1529864855709" duration="4698000" />
       <workItem from="1529910136457" duration="348000" />
-      <workItem from="1529938074250" duration="3843000" />
+      <workItem from="1529938074250" duration="7473000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1528534252580</created>
@@ -679,11 +715,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529868468312</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Download and preview file.">
+      <created>1529941943216</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529941943216</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169007000" />
+    <option name="totallyTimeSpent" value="172637000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -754,7 +797,8 @@
     <MESSAGE value="Clean up and new elemets added." />
     <MESSAGE value="Comments added. Some style update." />
     <MESSAGE value="Fix for dropdown error. Deleted console logs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for dropdown error. Deleted console logs." />
+    <MESSAGE value="Download and preview file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Download and preview file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1005,20 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/authentication.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1033,41 +1063,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="299" column="32" lean-forward="false" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/material-ui/Paper/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="275" column="79" lean-forward="false" selection-start-line="275" selection-start-column="79" selection-end-line="275" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/view-courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="142" column="81" lean-forward="false" selection-start-line="142" selection-start-column="81" selection-end-line="142" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,18 +1091,66 @@
         <state relative-caret-position="391">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <element signature="e#38#64#0" expanded="true" />
+            <element signature="e#38#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/curriculum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="199" column="55" lean-forward="true" selection-start-line="199" selection-start-column="55" selection-end-line="199" selection-end-column="55" />
+        <state relative-caret-position="319">
+          <caret line="204" column="20" lean-forward="false" selection-start-line="204" selection-start-column="20" selection-end-line="204" selection-end-column="20" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="288" column="55" lean-forward="false" selection-start-line="288" selection-start-column="55" selection-end-line="288" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/view-courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="142" column="81" lean-forward="false" selection-start-line="142" selection-start-column="81" selection-end-line="142" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="393" column="37" lean-forward="false" selection-start-line="393" selection-start-column="37" selection-end-line="393" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="220" column="15" lean-forward="false" selection-start-line="220" selection-start-column="15" selection-end-line="220" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

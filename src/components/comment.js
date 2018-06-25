@@ -286,7 +286,7 @@ class Comment extends Component {
         return (
             <div className='no-display'>
                 {comment._user.no === this.props.user.no ? <span>
-                                            <FlatButton label="Delete"
+                                            <FlatButton
                                                         labelStyle={{fontSize: '1.4rem'}}
                                                         onTouchTap={() => {
                                                             this.commentRemove(comment)

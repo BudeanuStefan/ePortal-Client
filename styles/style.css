@@ -363,3 +363,33 @@ body {
 .left-text {
     margin: 0 auto;
 }
+
+.no-display span {
+        top: 0;
+        position: absolute;
+        right: 0;
+    }
+
+.no-display button {
+    min-width: 30px!important;
+    height: 30px!important;
+    background: url("/public/assets/images/close.png") no-repeat center;
+}
+
+.no-display button div span {
+    font-size: 12px!important;
+    color: #9b190e;
+    font-weight: bold!important;
+}
+
+.btn {
+    border-radius: 50px;
+}
+
+input {
+    border: 1px solid #9e9e9e!important;
+    border-radius: 50px!important;
+    height: 2.5rem!important;
+    padding-left: 10px!important;
+    box-sizing: border-box!important;
+}

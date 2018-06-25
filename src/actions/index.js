@@ -80,7 +80,7 @@ export function signUp({registrationId, email, password, name, avatar, yearOfStu
           dispatch(signIn());
           dispatch(userInfo());
 
-          //return history.push('/view-courses');
+          return history.push('/');
         })
         .catch(response => {
           console.log('error', response);

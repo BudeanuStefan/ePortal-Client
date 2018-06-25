@@ -1,5 +1,7 @@
-@media screen and (min-width: 1024px) {
-
+@media screen and (min-width: 768px) {
+    #form_info {
+        width: 30%!important;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1399px) {

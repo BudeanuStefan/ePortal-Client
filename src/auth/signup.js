@@ -215,9 +215,9 @@ console.log(this.state.isSubmitting);
                 className="form-control"
                 onChange={this.uploadFile}/>
           </RaisedButton>
-          <div>
-            <input id="avatar_text" type="text" readOnly="" className="form-control" placeholder=""/>
-          </div>
+          {/*<div>*/}
+            {/*<input id="avatar_text" type="text" readOnly="" className="form-control" placeholder=""/>*/}
+          {/*</div>*/}
           <div>
             <img id="avatar_image" width="50px" height="50px" alt="" className="img-circle"
                  style={{marginLeft: 4, marginRight: 4, verticalAlign: 'middle'}}/>
