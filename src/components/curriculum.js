@@ -6,9 +6,9 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Dialog from 'material-ui/Dialog';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
+import FileViewer from 'react-file-viewer';
 import {fetchLecture, viewLecture} from '../actions/lecture';
 import {userInfo} from '../actions';
-
 import SignIn from '../auth/signin';
 
 import '../../styles/detail.css';
@@ -191,7 +191,11 @@ class Curriculum extends Component {
                     <span>{body.content}</span>
                   </div>
                   <div className="col-sm-3 text-center">
-                    {this.lecturePreview(header, body, body.preview)}
+                    <a href='http://www.rebe.rau.ro/RePEc/rau/jisomg/SP12/JISOM-SP12-A18.pdf'
+                       target='_blank'
+                       download='course.pdf'
+                       style={{color: 'black'}}> Preview
+                    </a>
                   </div>
                   <div className="col-sm-2 text-right">
                     <span>{body.time}</span>

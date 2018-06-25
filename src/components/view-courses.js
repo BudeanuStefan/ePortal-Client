@@ -139,7 +139,8 @@ class ViewCourses extends Component {
                     height: '100%',
                     padding: 10,
                     margin: 10,
-                    backgroundColor: '#FFF'
+                    backgroundColor: '#FFF',
+                    boxShadow: 'rgba(0, 0, 0, 0.5) 0px 1px 6px, rgba(0, 0, 0, 0.5) 0px 1px 4px',
                 }}>
                     <div
                         style={{marginLeft: 3, marginRight: 3, marginTop: 12, marginBottom: 8, overflow: 'hidden'}}>
